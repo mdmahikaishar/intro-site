@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <title>Intro Site</title>
+        <meta name="author" content="mdmahikaishar mahikaishar@gmail.com">
+        <meta name="description" content="Intro Site.">
+    </head>
+    <body>
+        <header class="header">
+            <!-- Navigation -->
+            <nav class="nav">
+                <div class="hold">
+                    <a class="navLogo" href=""
+                        ><img src="./images/logo.svg" alt=""
+                    /></a>
+
+                    <input type="checkbox" class="navToggler" id="navToggler" />
+                    <label for="navToggler"></label>
+
+                    <ul class="navLinks">
+                        <li class="navItem">
+                            <a class="navLink" href="">Product</a>
+                        </li>
+                        <li class="navItem">
+                            <a class="navLink" href="">Features</a>
+                        </li>
+                        <li class="navItem">
+                            <a class="navLink" href="">Pricing</a>
+                        </li>
+                        <li class="navItem">
+                            <a class="navLink navLinkDisable navLinkSep" href=""
+                                ><span class=""></span
+                            ></a>
+                        </li>
+                        <li class="navItem">
+                            <a class="navLink navLinkDisable" href="">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hold">
+                    <div class="heroLeft">
+                        <div class="heroTabs">
+                            <input
+                                type="radio"
+                                name="heroTab"
+                                class="heroTab"
+                                id="new"
+                                checked
+                            />
+                            <label for="new">New</label>
+                            <input
+                                type="radio"
+                                name="heroTab"
+                                class="heroTab"
+                                id="monograph"
+                            />
+                            <label for="monograph">Monograph</label>
+                            <input
+                                type="radio"
+                                name="heroTab"
+                                class="heroTab"
+                                id="dashboard"
+                            />
+                            <label for="dashboard">Dashboard</label>
+                        </div>
+
+                        <div class="heroTxt">
+                            <h1>Powerful insights into your team</h1>
+                            <p>
+                                Project planning and time tracking for agile
+                                teams
+                            </p>
+                        </div>
+
+                        <div class="heroBtns">
+                            <button class="heroBtn">Schedule a demo</button>
+                            <button class="heroBtn">To see a preview</button>
+                        </div>
+                    </div>
+
+                    <div class="heroRight">
+                        <img
+                            class="heroImg"
+                            src="./images/illustration-devices.svg"
+                            alt=""
+                        />
+                    </div>
+                </div>
+            </section>
+        </header>
+    </body>
+</html>

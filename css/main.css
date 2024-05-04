@@ -1,0 +1,304 @@
+:root {
+  --red: hsl(0, 100%, 68%);
+  --veryDarkBlue: hsl(230, 29%, 20%);
+  --darkGrayishBlue: hsl(230, 11%, 40%);
+  --grayishBlue: hsl(231, 7%, 65%);
+  --lightGrayishBlue: hsl(207, 33%, 95%);
+  --navH: 8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hold {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nav .hold {
+  height: var(--navH);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navToggler {
+  display: none;
+}
+
+.navToggler + label {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+  background-image: url("../images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navToggler:checked ~ label {
+  background-image: url("../images/icon-close.svg");
+}
+
+.navLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--veryDarkBlue);
+}
+
+.navLinks {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.navLinkDisable {
+  color: var(--grayishBlue);
+}
+
+.navLinkSep {
+  pointer-events: none;
+}
+
+.navLinkSep span {
+  width: 0.4em;
+  height: 0.4em;
+  display: block;
+  background-color: var(--grayishBlue);
+  border-radius: 50%;
+}
+
+@media (max-width: 620px) {
+  .navToggler + label {
+    display: block;
+  }
+  .navToggler:checked ~ .navLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+  }
+  .navLinks {
+    width: 80%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1rem;
+    position: absolute;
+    top: var(--navH);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: var(--lightGrayishBlue);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    opacity: 0;
+  }
+  .navLinkSep span {
+    width: 80%;
+    height: 0.1em;
+    position: absolute;
+    left: 10%;
+    border-radius: 0;
+  }
+}
+
+.hero {
+  overflow-x: hidden;
+}
+
+.hero .hold {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.heroLeft {
+  width: 50%;
+}
+
+.heroTab {
+  display: none;
+}
+
+.heroTabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heroTabs label {
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--grayishBlue);
+  border-radius: 1rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.heroTab:checked + label {
+  font-weight: 700;
+  background-color: var(--veryDarkBlue);
+  color: var(--lightGrayishBlue);
+}
+
+.heroTxt h1 {
+  max-width: 18ch;
+  margin-top: 1rem;
+  font-size: 3rem;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: var(--veryDarkBlue);
+}
+
+.heroTxt p {
+  margin: 1rem 0;
+  color: var(--darkGrayishBlue);
+}
+
+.heroBtn {
+  padding: 0.75em 1.5em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px transparent;
+  color: var(--grayishBlue);
+  border-radius: 0.25em;
+}
+
+.heroBtns {
+  margin-top: 3rem;
+}
+
+.heroBtn:first-child {
+  font-weight: 700;
+  background-color: var(--red);
+  border-color: var(--red);
+  color: var(--lightGrayishBlue);
+  cursor: pointer;
+}
+
+.heroBtn:first-child:hover {
+  opacity: 0.8;
+}
+
+.heroRight {
+  width: 50%;
+  padding-left: 1rem;
+}
+
+.heroRight::before {
+  width: 50%;
+  height: 50%;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-color: var(--lightGrayishBlue);
+  border-bottom-left-radius: 5rem;
+}
+
+@media (max-width: 1230px) {
+  .heroTxt h1 {
+    font-size: 2.5rem;
+  }
+  .heroTxt p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero .hold {
+    padding: var(--navH) 0 calc(var(--navH) / 2) 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .heroLeft {
+    width: 100%;
+    margin-top: 2rem;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .heroTabs label {
+    font-size: 0.7rem;
+  }
+  .heroTxt h1 {
+    max-width: 18ch;
+  }
+  .heroTxt p {
+    color: var(--darkGrayishBlue);
+  }
+  .heroBtn {
+    font-size: 0.8rem;
+  }
+  .heroBtns {
+    margin-top: 2rem;
+  }
+  .heroRight {
+    width: 100%;
+    height: 60vh;
+    padding: 0;
+  }
+  .heroRight img {
+    height: 50vh;
+  }
+  .heroRight::before {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 620px) {
+  .heroTxt h1 {
+    font-size: 1.5rem;
+  }
+  .heroBtn {
+    font-size: 0.6rem;
+  }
+}
